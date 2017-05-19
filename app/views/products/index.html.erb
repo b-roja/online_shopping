@@ -1,0 +1,31 @@
+<%=link_to "add product",new_product_path%>
+<table class="table table-striped">
+	<tr>
+	    <th>Image</th>
+	    <th>Name</th>
+		<th>Brand</th>
+		<th>Price</th>
+		<th>Size</th>
+		</tr>
+<% @product.each do | i | %>
+<tr>
+   
+  	  <td>
+	  <% unless i.images.blank? %>
+	    <% i.images.each do | image |%>
+          <%= image_tag image.photo(:thumb)%>
+	    <%end%>
+	  <%end%>
+
+   
+  
+  
+
+	</td>
+	  <td><%= i.name %></td>
+      <td><%= i.brand %></td>
+      <td><%= i.price %></td>
+      <td><%= i.size %></td>
+    </tr>
+<%end%>
+</table>

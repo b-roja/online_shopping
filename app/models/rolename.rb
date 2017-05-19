@@ -1,0 +1,2 @@
+class Rolename < ApplicationRecord
+end

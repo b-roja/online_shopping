@@ -1,0 +1,28 @@
+<!--%= @users.inspect %-->
+
+ <table class="table table-bordered">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Password</th>
+		<th>confirm_password</th>
+		<th>Gender</th>
+		<th>Mobile</th>
+		</tr>
+<% @users.each do | i | %>
+	<tr>  
+      <td><%= i.name %></td>
+      <td><%= i.email %></td>
+      <td><%= i.password %></td>
+      <td><%= i.confirm_password %></td>
+      <td><%= i.gender%></td>
+      <td><%= i.mobile %></td>
+      <td><%= link_to "Show", user_path(i)%></td>
+      <td><%= link_to "Edit", edit_user_path(i)%></td>
+      <td><%= link_to "Delete", i, method: :delete, data: {confirm: "Are you sure!"}%></td>
+      
+<%end%>
+</table>
+
+<%= link_to "Add New User", new_user_path%>
+

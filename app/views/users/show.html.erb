@@ -1,0 +1,24 @@
+table>
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Password</th>
+		<th>Confirm_password</th>
+		<th>Mobile</th>
+		<th>Gender</th>
+		</tr>
+
+	<tr>  
+      <td><%= @user.name%></td>
+      <td><%= @user.email%></td>
+      <td><%= @user.password %></td>
+      <td><%= @user. confirm_password%></td>
+      <td><%= @user.mobile%></td>
+      <td><%= @user.gender%></td>
+      <td><%= link_to "Show", user_path(@user)%>
+      <td><%= link_to "Edit", edit_user_path(@user)%></td>
+      </tr>
+
+</table>
+
+<%= link_to "<<back", users_path%>
